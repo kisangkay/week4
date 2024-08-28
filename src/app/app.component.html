@@ -14,6 +14,12 @@
           <a class="nav-link active" aria-current="page" routerLink="/account"> Account</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/profile"> Profile</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="logout()" class="nav-link active" aria-current="page" routerLink="/profile"> Logout</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item">
@@ -34,7 +40,7 @@
     </div>
   </div>
 </nav>
-<router-outlet></router-outlet> 
+<router-outlet></router-outlet>
 <!-- angular uses the router dynamically to insert the component that matches the active route.
 so in the url if its "/login" angular will inject 
 the login component (files html etc) if i remove it, no content/component is injected -->

@@ -1,0 +1,23 @@
+[
+    {
+        "userid":1,
+        "email": "user1@email.com",
+        "username": "user1",
+        "birthdate": "1980-02-01",
+        "age": 44
+    },
+    {
+        "userid":2,
+        "email": "user2@example.com",
+        "username": "user2",
+        "birthdate": "1991-02-11",
+        "age": 43
+    },
+    {
+        "userid":3,
+        "email": "user3@example.com",
+        "username": "user3",
+        "birthdate": "1989-02-04",
+        "age": 45
+    }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "myserverproject",
+  "main": "server.js",
+  "scripts": {
+    "test": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kisangkay/week4.git"
+  },
+  "author": "stephenkoech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kisangkay/week4/issues"
+  },
+  "homepage": "https://github.com/kisangkay/week4#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "2.8.5",
+    "fs": "^0.0.1-security"
+  }
+}

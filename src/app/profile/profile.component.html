@@ -1,0 +1,15 @@
+<main class="form-signin w-100 m-auto">
+      <h3 class="h3 mb-3 fw-normal">Your profile details</h3>
+      ID
+        <input type="number" [(ngModel)]="userid" class="form-control" >
+        Username
+        <input type="text" [(ngModel)]="username" class="form-control">
+        Birthdate
+        <input type="datetime" [(ngModel)]="birthdate" class="form-control">
+        Age
+        <input type="number" [(ngModel)]="age" class="form-control">
+      
+
+      <button (click)="editprof()" class="btn btn-primary w-100 py-2" type="submit">Save</button>
+    
+  </main>
