@@ -1,13 +1,17 @@
 <main class="form-signin w-100 m-auto">
       <h3 class="h3 mb-3 fw-normal">Your profile details</h3>
+      <h5>I disabled username because we are using the username in the backend to find the index of a user entry</h5>
+
       ID
         <input type="number" [(ngModel)]="userid" class="form-control" >
         Username
-        <input type="text" [(ngModel)]="username" class="form-control">
+        <input type="text" [(ngModel)]="username" class="form-control" disabled>
         Birthdate
         <input type="datetime" [(ngModel)]="birthdate" class="form-control">
         Age
         <input type="number" [(ngModel)]="age" class="form-control">
+        Email
+        <input type="email" [(ngModel)]="email" class="form-control">
       
 
       <button (click)="editprof()" class="btn btn-primary w-100 py-2" type="submit">Save</button>

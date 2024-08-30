@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account',
@@ -17,12 +18,18 @@ export class AccountComponent {
   birthdate:any;
   age:any;
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private router: Router ,private httpClient: HttpClient) {
     this.username = sessionStorage.getItem('username')!;
     this.email = sessionStorage.getItem('email');
     this.userid = Number(sessionStorage.getItem('userid'));
     this.birthdate = sessionStorage.getItem('birthdate')!;
     this.age = Number(sessionStorage.getItem('age'));
+  }
+  ngOnInit() {
+    if (!sessionStorage.getItem('userid')) {
+      this.router.navigateByUrl("/login");
+      alert("Please login first");
+    }
   }
 
 }

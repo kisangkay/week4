@@ -17,12 +17,8 @@ const http = require('http').Server(app); //used to provide http functionality. 
 app.use(express.urlencoded({extended: true})); // Parses incoming requests with URL-encoded data
 app.use(express.json()); // Parses incoming requests with JSON payloads
 
-// app.post('/login', auth);
 app.post('/login', require('./api/auth'));
 app.post('/profile', require('./api/profile'));
-
-// require('./api/auth')(app); // Importing the function from api/auth
-// app.post('/login', require('./api/auth'));
 
 
 http.listen(PORT, 

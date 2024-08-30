@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
@@ -15,14 +15,17 @@ export class AppComponent {
   title = 'week4tut';
 
   constructor(private router: Router) {}
-
-  // if (!sessionStorage) {
-  //   this.router.navigateByUrl("/login");
-  //   alert("PLease login first");
-  // }
+  ngOnInit() {
+    if (!sessionStorage.getItem('userid')) {
+      this.router.navigateByUrl("/login");
+      alert("Please login first");
+    }
+  }
 
   logout(){
     sessionStorage.clear();
     this.router.navigateByUrl("/login");
   }
 }
+
+
